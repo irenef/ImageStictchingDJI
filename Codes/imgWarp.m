@@ -8,16 +8,29 @@ function [outputImg, corner] = imgWarp(inputImg, params, method)
 % Bilinearly interpolate is used in this function
 
 %% Find the corner location after transformation
-topLeft = transformInv([1, 1], params, method);
-topRight = transformInv([size(inputImg, 2), 1], params, method);
-bottomLeft = transformInv([1, size(inputImg, 1)], params, method);
-bottomRight = transformInv([size(inputImg, 2), size(inputImg, 1)], params, method);
+% topLeft = transformInv([1, 1], params, method);
+% topRight = transformInv([size(inputImg, 2), 1], params, method);
+% bottomLeft = transformInv([1, size(inputImg, 1)], params, method);
+% bottomRight = transformInv([size(inputImg, 2), size(inputImg, 1)], params, method);
+% minX = ceil(min(topLeft(1), bottomLeft(1)));
+% maxX = floor(max(topRight(1), bottomRight(1)));
+% minY = ceil(min(topLeft(2), topRight(2)));
+% maxY = floor(max(bottomLeft(2), bottomRight(2)));
+% 
+% corner = [minX, maxX, minY, maxY];
+
+%% Find the corner location after transformation
+topLeft = transform([1, 1], params, method);
+topRight = transform([size(inputImg, 2), 1], params, method);
+bottomLeft = transform([1, size(inputImg, 1)], params, method);
+bottomRight = transform([size(inputImg, 2), size(inputImg, 1)], params, method);
 minX = ceil(min(topLeft(1), bottomLeft(1)));
 maxX = floor(max(topRight(1), bottomRight(1)));
 minY = ceil(min(topLeft(2), topRight(2)));
-maxY = floor(max(bottomLeft(2), bottomLeft(2)));
+maxY = floor(max(bottomLeft(2), bottomRight(2)));
 
 corner = [minX, maxX, minY, maxY];
+
 %% Define the size of image according to the corner location
 sizeX = maxX - minX + 1;
 sizeY = maxY - minY + 1;
@@ -30,8 +43,9 @@ inputImgDouble = double(inputImg);
 for xWarp = minX : maxX
     for yWarp = minY : maxY
         % Compute the new location of pixel (x, y) after transformation
-        temp = transform([xWarp, yWarp], params, method);
-        
+%         temp = transform([xWarp, yWarp], params, method);
+        temp = transformInv([xWarp, yWarp], params, method);
+
         % Bilinearly interpolate
         x = temp(1);
         y = temp(2);

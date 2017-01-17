@@ -18,6 +18,8 @@
 
 %% Step 0 - Load Images
 clear all; close all
+warning off
+
 % Load images.
 % Change to the right repository before running the codes.
 Dir = 'C:\Users\hesun\Google Drive\Course\CoputerVision\ImageStictchingDJI\Images';
@@ -74,9 +76,9 @@ for itrImg = 2 : Scene.Count
     % algorithm
     numMatches = size(indexPairs, 1);
     maxInliers = 0;
-    epsilon = 5;
-    numItr = 100000;
-    percentSample = 0.2;
+    epsilon = 10;
+    numItr = 1000;
+    percentSample = 0.4;
     numSample = ceil(percentSample * numMatches);
     largestSet = [];
     bestParams = [];
@@ -122,6 +124,7 @@ for itrImg = 2 : Scene.Count
                 [V, D] = eig(H' * H);
                 [eigenSorted, eigenInd] = sort(diag(D), 'ascend');
                 params = V(:, eigenInd(1));
+
                 
             otherwise
                 % Least square regression to calculate the paramters
@@ -180,7 +183,7 @@ for itrImg = 2 : Scene.Count
     % Compute the parameters for the transformation
     switch lower(method)
         case 'homography'
-%             [V, D] = eig(H' * H);
+%             [V, D] = eig(double(H' * H));
 %             [eignSorted, eigenInd] = sort(diag(D), 'ascend');
 %             params = V(:, eigenInd(1));
             params = bestParams;
@@ -188,9 +191,13 @@ for itrImg = 2 : Scene.Count
             params = (H' * H)^(-1) * H' * z;
     end
     
+    tforms(itrImg-1,:) = params';
+ 
+end
 
-    % Find the plus of current tranform and previous transform
-    paramsPlus = transformPlus((tforms(itrImg-1,:))', params, method);
+% Find the plus of current tranform and previous transform
+for itrImg = Scene.Count - 1 : 1
+    paramsPlus = transformPlus((tforms(itrImg,:))', (tforms(itrImg + 1,:))', method);
     tforms(itrImg,:) = paramsPlus';
 end
 %%
@@ -206,22 +213,32 @@ end
 % Warp the images according to the transform
 Iwarp = cell(Scene.Count,1);
 limit = zeros(Scene.Count, 4);
-Iwarp{1} = I{1};
-limit(1,:) = [1, size(I{1}, 2), 1, size(I{1}, 1)];
-for itrImg = 2 : Scene.Count
+for itrImg = 1 : Scene.Count
     params = (tforms(itrImg, :))';
     [Itemp, corner] = imgWarp(I{itrImg}, params, method);
     Iwarp{itrImg} = Itemp;
     limit(itrImg, :) = corner;
 end
 %% Step 5 - Blend images in overlapping regions
-Iwarp_new = cell(Scene.Count,1);
-Iwarp_new{2} = Iwarp{1};
-Iwarp_new{1} = Iwarp{2};
-limit_new = limit;
-limit_new(1,:) = limit(2,:);
-limit_new(2,:) = limit(1,:);
+% Iwarp_new = cell(Scene.Count,1);
+% Iwarp_new{2} = Iwarp{1};
+% Iwarp_new{1} = Iwarp{2};
+% limit_new = limit;
+% limit_new(1,:) = limit(2,:);
+% limit_new(2,:) = limit(1,:);
 blendMethod = 'firstOccupy';
-panoramaView = panorama(Iwarp_new, limit_new, blendMethod);
-% panoramaView = panorama(Iwarp, limit, blendMethod);
+% panoramaView = panorama(Iwarp_new, limit_new, blendMethod);
+panoramaView = panorama(Iwarp, limit, blendMethod);
 figure, imshow(panoramaView);
+
+%% plot the feature with images
+figure(3), imshow(I{1}), hold on
+for itr = 1:1%size(matchedPoints.Location, 1)
+plot(matchedPointsPrev.Location(itr, 1), matchedPointsPrev.Location(itr, 2), 'ro');
+hold on
+end
+figure(4), imshow(I{2}), hold on
+for itr = 1:1%size(matchedPoints.Location, 1)
+plot(matchedPoints.Location(itr, 1), matchedPoints.Location(itr, 2), 'ro');
+hold on
+end

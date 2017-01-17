@@ -26,6 +26,7 @@ panoramaMask = uint8(ones(size(panoramaView)));
 
 for itr = 1 : length(Iwarp)
     panoramaViewNow = 0 * panoramaView;
+%     panoramaViewNow(range(4)-limit(itr,4)+1 : range(4) - limit(itr,3)+1, ...
     panoramaViewNow(limit(itr,3)-range(3)+1 : limit(itr,4)-range(3)+1, ...
     limit(itr,1)-range(1)+1 : limit(itr,2)-range(1)+1, :) = Iwarp{itr};
     panoramaView = panoramaView + panoramaMask .* panoramaViewNow;
