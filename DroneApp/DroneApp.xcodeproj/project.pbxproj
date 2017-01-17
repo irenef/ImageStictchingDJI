@@ -1,0 +1,654 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		EF3C85F91E2AB5FD000BAD46 /* DJISDK.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EF4BF9451E2AB2D900A41614 /* DJISDK.framework */; };
+		EF3C85FA1E2AB5FD000BAD46 /* DJISDK.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = EF4BF9451E2AB2D900A41614 /* DJISDK.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		EF3C85FC1E2AB606000BAD46 /* VideoPreviewer.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EF3C85F81E2AB5EC000BAD46 /* VideoPreviewer.framework */; };
+		EF3C85FD1E2AB606000BAD46 /* VideoPreviewer.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = EF3C85F81E2AB5EC000BAD46 /* VideoPreviewer.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		EF4BF9F31E2AB3BA00A41614 /* DJICameraViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = EF4BF9F21E2AB3BA00A41614 /* DJICameraViewController.m */; };
+		EFDD37861DFF5C0C00C76D73 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = EFDD37851DFF5C0C00C76D73 /* main.m */; };
+		EFDD37891DFF5C0C00C76D73 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = EFDD37881DFF5C0C00C76D73 /* AppDelegate.m */; };
+		EFDD378F1DFF5C0C00C76D73 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EFDD378D1DFF5C0C00C76D73 /* Main.storyboard */; settings = {ASSET_TAGS = (capture, ); }; };
+		EFDD37911DFF5C0C00C76D73 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = EFDD37901DFF5C0C00C76D73 /* Assets.xcassets */; };
+		EFDD37941DFF5C0C00C76D73 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EFDD37921DFF5C0C00C76D73 /* LaunchScreen.storyboard */; };
+		EFDD379F1DFF5C0C00C76D73 /* DroneTrackerTests.m in Sources */ = {isa = PBXBuildFile; fileRef = EFDD379E1DFF5C0C00C76D73 /* DroneTrackerTests.m */; };
+		EFDD37AA1DFF5C0C00C76D73 /* DroneTrackerUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = EFDD37A91DFF5C0C00C76D73 /* DroneTrackerUITests.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		EF3C85F71E2AB5EC000BAD46 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = EF3C85F31E2AB5EC000BAD46 /* VideoPreviewer.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 02A543FD1C3C51CB0083C11B;
+			remoteInfo = VideoPreviewer;
+		};
+		EF3C85FE1E2AB606000BAD46 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = EF3C85F31E2AB5EC000BAD46 /* VideoPreviewer.xcodeproj */;
+			proxyType = 1;
+			remoteGlobalIDString = 02A543FC1C3C51CB0083C11B;
+			remoteInfo = VideoPreviewer;
+		};
+		EFDD379B1DFF5C0C00C76D73 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = EFDD37791DFF5C0C00C76D73 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = EFDD37801DFF5C0C00C76D73;
+			remoteInfo = DroneTracker;
+		};
+		EFDD37A61DFF5C0C00C76D73 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = EFDD37791DFF5C0C00C76D73 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = EFDD37801DFF5C0C00C76D73;
+			remoteInfo = DroneTracker;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		EF3C85FB1E2AB5FD000BAD46 /* Embed Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				EF3C85FD1E2AB606000BAD46 /* VideoPreviewer.framework in Embed Frameworks */,
+				EF3C85FA1E2AB5FD000BAD46 /* DJISDK.framework in Embed Frameworks */,
+			);
+			name = "Embed Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
+/* Begin PBXFileReference section */
+		EF3C85F31E2AB5EC000BAD46 /* VideoPreviewer.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = VideoPreviewer.xcodeproj; path = VideoPreviewer/VideoPreviewer.xcodeproj; sourceTree = "<group>"; };
+		EF4BF9451E2AB2D900A41614 /* DJISDK.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = DJISDK.framework; sourceTree = "<group>"; };
+		EF4BF9F11E2AB3BA00A41614 /* DJICameraViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DJICameraViewController.h; sourceTree = "<group>"; };
+		EF4BF9F21E2AB3BA00A41614 /* DJICameraViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DJICameraViewController.m; sourceTree = "<group>"; };
+		EFDD37811DFF5C0C00C76D73 /* DroneApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DroneApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		EFDD37851DFF5C0C00C76D73 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		EFDD37871DFF5C0C00C76D73 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		EFDD37881DFF5C0C00C76D73 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		EFDD378E1DFF5C0C00C76D73 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		EFDD37901DFF5C0C00C76D73 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		EFDD37931DFF5C0C00C76D73 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		EFDD37951DFF5C0C00C76D73 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		EFDD379A1DFF5C0C00C76D73 /* DroneAppTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = DroneAppTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		EFDD379E1DFF5C0C00C76D73 /* DroneTrackerTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DroneTrackerTests.m; sourceTree = "<group>"; };
+		EFDD37A01DFF5C0C00C76D73 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		EFDD37A51DFF5C0C00C76D73 /* DroneAppUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = DroneAppUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		EFDD37A91DFF5C0C00C76D73 /* DroneTrackerUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DroneTrackerUITests.m; sourceTree = "<group>"; };
+		EFDD37AB1DFF5C0C00C76D73 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		EFDD377E1DFF5C0C00C76D73 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				EF3C85FC1E2AB606000BAD46 /* VideoPreviewer.framework in Frameworks */,
+				EF3C85F91E2AB5FD000BAD46 /* DJISDK.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		EFDD37971DFF5C0C00C76D73 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		EFDD37A21DFF5C0C00C76D73 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		EF3C85F41E2AB5EC000BAD46 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				EF3C85F81E2AB5EC000BAD46 /* VideoPreviewer.framework */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		EF4BF9441E2AB2D900A41614 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				EF3C85F31E2AB5EC000BAD46 /* VideoPreviewer.xcodeproj */,
+				EF4BF9451E2AB2D900A41614 /* DJISDK.framework */,
+			);
+			name = Frameworks;
+			path = DroneTracker/Frameworks;
+			sourceTree = "<group>";
+		};
+		EFDD37781DFF5C0C00C76D73 = {
+			isa = PBXGroup;
+			children = (
+				EF4BF9441E2AB2D900A41614 /* Frameworks */,
+				EFDD37831DFF5C0C00C76D73 /* DroneTracker */,
+				EFDD379D1DFF5C0C00C76D73 /* DroneTrackerTests */,
+				EFDD37A81DFF5C0C00C76D73 /* DroneTrackerUITests */,
+				EFDD37821DFF5C0C00C76D73 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		EFDD37821DFF5C0C00C76D73 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				EFDD37811DFF5C0C00C76D73 /* DroneApp.app */,
+				EFDD379A1DFF5C0C00C76D73 /* DroneAppTests.xctest */,
+				EFDD37A51DFF5C0C00C76D73 /* DroneAppUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		EFDD37831DFF5C0C00C76D73 /* DroneTracker */ = {
+			isa = PBXGroup;
+			children = (
+				EFDD37871DFF5C0C00C76D73 /* AppDelegate.h */,
+				EFDD37881DFF5C0C00C76D73 /* AppDelegate.m */,
+				EFDD378D1DFF5C0C00C76D73 /* Main.storyboard */,
+				EF4BF9F11E2AB3BA00A41614 /* DJICameraViewController.h */,
+				EF4BF9F21E2AB3BA00A41614 /* DJICameraViewController.m */,
+				EFDD37901DFF5C0C00C76D73 /* Assets.xcassets */,
+				EFDD37921DFF5C0C00C76D73 /* LaunchScreen.storyboard */,
+				EFDD37951DFF5C0C00C76D73 /* Info.plist */,
+				EFDD37841DFF5C0C00C76D73 /* Supporting Files */,
+			);
+			path = DroneTracker;
+			sourceTree = "<group>";
+		};
+		EFDD37841DFF5C0C00C76D73 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				EFDD37851DFF5C0C00C76D73 /* main.m */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		EFDD379D1DFF5C0C00C76D73 /* DroneTrackerTests */ = {
+			isa = PBXGroup;
+			children = (
+				EFDD379E1DFF5C0C00C76D73 /* DroneTrackerTests.m */,
+				EFDD37A01DFF5C0C00C76D73 /* Info.plist */,
+			);
+			path = DroneTrackerTests;
+			sourceTree = "<group>";
+		};
+		EFDD37A81DFF5C0C00C76D73 /* DroneTrackerUITests */ = {
+			isa = PBXGroup;
+			children = (
+				EFDD37A91DFF5C0C00C76D73 /* DroneTrackerUITests.m */,
+				EFDD37AB1DFF5C0C00C76D73 /* Info.plist */,
+			);
+			path = DroneTrackerUITests;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		EFDD37801DFF5C0C00C76D73 /* DroneApp */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = EFDD37AE1DFF5C0C00C76D73 /* Build configuration list for PBXNativeTarget "DroneApp" */;
+			buildPhases = (
+				EFDD377D1DFF5C0C00C76D73 /* Sources */,
+				EFDD377E1DFF5C0C00C76D73 /* Frameworks */,
+				EFDD377F1DFF5C0C00C76D73 /* Resources */,
+				EF3C85FB1E2AB5FD000BAD46 /* Embed Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				EF3C85FF1E2AB606000BAD46 /* PBXTargetDependency */,
+			);
+			name = DroneApp;
+			productName = DroneTracker;
+			productReference = EFDD37811DFF5C0C00C76D73 /* DroneApp.app */;
+			productType = "com.apple.product-type.application";
+		};
+		EFDD37991DFF5C0C00C76D73 /* DroneAppTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = EFDD37B11DFF5C0C00C76D73 /* Build configuration list for PBXNativeTarget "DroneAppTests" */;
+			buildPhases = (
+				EFDD37961DFF5C0C00C76D73 /* Sources */,
+				EFDD37971DFF5C0C00C76D73 /* Frameworks */,
+				EFDD37981DFF5C0C00C76D73 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				EFDD379C1DFF5C0C00C76D73 /* PBXTargetDependency */,
+			);
+			name = DroneAppTests;
+			productName = DroneTrackerTests;
+			productReference = EFDD379A1DFF5C0C00C76D73 /* DroneAppTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		EFDD37A41DFF5C0C00C76D73 /* DroneAppUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = EFDD37B41DFF5C0C00C76D73 /* Build configuration list for PBXNativeTarget "DroneAppUITests" */;
+			buildPhases = (
+				EFDD37A11DFF5C0C00C76D73 /* Sources */,
+				EFDD37A21DFF5C0C00C76D73 /* Frameworks */,
+				EFDD37A31DFF5C0C00C76D73 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				EFDD37A71DFF5C0C00C76D73 /* PBXTargetDependency */,
+			);
+			name = DroneAppUITests;
+			productName = DroneTrackerUITests;
+			productReference = EFDD37A51DFF5C0C00C76D73 /* DroneAppUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		EFDD37791DFF5C0C00C76D73 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				KnownAssetTags = (
+					capture,
+				);
+				LastUpgradeCheck = 0820;
+				ORGANIZATIONNAME = fearnine;
+				TargetAttributes = {
+					EFDD37801DFF5C0C00C76D73 = {
+						CreatedOnToolsVersion = 8.2;
+						DevelopmentTeam = 7R674T823F;
+						ProvisioningStyle = Automatic;
+					};
+					EFDD37991DFF5C0C00C76D73 = {
+						CreatedOnToolsVersion = 8.2;
+						DevelopmentTeam = 7R674T823F;
+						ProvisioningStyle = Automatic;
+						TestTargetID = EFDD37801DFF5C0C00C76D73;
+					};
+					EFDD37A41DFF5C0C00C76D73 = {
+						CreatedOnToolsVersion = 8.2;
+						DevelopmentTeam = 7R674T823F;
+						ProvisioningStyle = Automatic;
+						TestTargetID = EFDD37801DFF5C0C00C76D73;
+					};
+				};
+			};
+			buildConfigurationList = EFDD377C1DFF5C0C00C76D73 /* Build configuration list for PBXProject "DroneApp" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = EFDD37781DFF5C0C00C76D73;
+			productRefGroup = EFDD37821DFF5C0C00C76D73 /* Products */;
+			projectDirPath = "";
+			projectReferences = (
+				{
+					ProductGroup = EF3C85F41E2AB5EC000BAD46 /* Products */;
+					ProjectRef = EF3C85F31E2AB5EC000BAD46 /* VideoPreviewer.xcodeproj */;
+				},
+			);
+			projectRoot = "";
+			targets = (
+				EFDD37801DFF5C0C00C76D73 /* DroneApp */,
+				EFDD37991DFF5C0C00C76D73 /* DroneAppTests */,
+				EFDD37A41DFF5C0C00C76D73 /* DroneAppUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXReferenceProxy section */
+		EF3C85F81E2AB5EC000BAD46 /* VideoPreviewer.framework */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.framework;
+			path = VideoPreviewer.framework;
+			remoteRef = EF3C85F71E2AB5EC000BAD46 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+/* End PBXReferenceProxy section */
+
+/* Begin PBXResourcesBuildPhase section */
+		EFDD377F1DFF5C0C00C76D73 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				EFDD37941DFF5C0C00C76D73 /* LaunchScreen.storyboard in Resources */,
+				EFDD37911DFF5C0C00C76D73 /* Assets.xcassets in Resources */,
+				EFDD378F1DFF5C0C00C76D73 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		EFDD37981DFF5C0C00C76D73 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		EFDD37A31DFF5C0C00C76D73 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		EFDD377D1DFF5C0C00C76D73 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				EFDD37891DFF5C0C00C76D73 /* AppDelegate.m in Sources */,
+				EFDD37861DFF5C0C00C76D73 /* main.m in Sources */,
+				EF4BF9F31E2AB3BA00A41614 /* DJICameraViewController.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		EFDD37961DFF5C0C00C76D73 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				EFDD379F1DFF5C0C00C76D73 /* DroneTrackerTests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		EFDD37A11DFF5C0C00C76D73 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				EFDD37AA1DFF5C0C00C76D73 /* DroneTrackerUITests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		EF3C85FF1E2AB606000BAD46 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = VideoPreviewer;
+			targetProxy = EF3C85FE1E2AB606000BAD46 /* PBXContainerItemProxy */;
+		};
+		EFDD379C1DFF5C0C00C76D73 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = EFDD37801DFF5C0C00C76D73 /* DroneApp */;
+			targetProxy = EFDD379B1DFF5C0C00C76D73 /* PBXContainerItemProxy */;
+		};
+		EFDD37A71DFF5C0C00C76D73 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = EFDD37801DFF5C0C00C76D73 /* DroneApp */;
+			targetProxy = EFDD37A61DFF5C0C00C76D73 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		EFDD378D1DFF5C0C00C76D73 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				EFDD378E1DFF5C0C00C76D73 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		EFDD37921DFF5C0C00C76D73 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				EFDD37931DFF5C0C00C76D73 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		EFDD37AC1DFF5C0C00C76D73 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.2;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		EFDD37AD1DFF5C0C00C76D73 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.2;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		EFDD37AF1DFF5C0C00C76D73 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				DEVELOPMENT_TEAM = 7R674T823F;
+				ENABLE_BITCODE = NO;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/DroneTracker/Frameworks",
+				);
+				INFOPLIST_FILE = DroneTracker/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/DroneTracker/Frameworks/VideoPreviewer/VideoPreviewer/ffmpeg/lib",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = fearnine.DroneTracker;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		EFDD37B01DFF5C0C00C76D73 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				DEVELOPMENT_TEAM = 7R674T823F;
+				ENABLE_BITCODE = NO;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/DroneTracker/Frameworks",
+				);
+				INFOPLIST_FILE = DroneTracker/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/DroneTracker/Frameworks/VideoPreviewer/VideoPreviewer/ffmpeg/lib",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = fearnine.DroneTracker;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
+		EFDD37B21DFF5C0C00C76D73 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				DEVELOPMENT_TEAM = 7R674T823F;
+				INFOPLIST_FILE = DroneTrackerTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = fearnine.DroneTrackerTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/DroneApp.app/DroneApp";
+			};
+			name = Debug;
+		};
+		EFDD37B31DFF5C0C00C76D73 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				DEVELOPMENT_TEAM = 7R674T823F;
+				INFOPLIST_FILE = DroneTrackerTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = fearnine.DroneTrackerTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/DroneApp.app/DroneApp";
+			};
+			name = Release;
+		};
+		EFDD37B51DFF5C0C00C76D73 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				DEVELOPMENT_TEAM = 7R674T823F;
+				INFOPLIST_FILE = DroneTrackerUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = fearnine.DroneTrackerUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_TARGET_NAME = DroneTracker;
+			};
+			name = Debug;
+		};
+		EFDD37B61DFF5C0C00C76D73 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				DEVELOPMENT_TEAM = 7R674T823F;
+				INFOPLIST_FILE = DroneTrackerUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = fearnine.DroneTrackerUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_TARGET_NAME = DroneTracker;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		EFDD377C1DFF5C0C00C76D73 /* Build configuration list for PBXProject "DroneApp" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				EFDD37AC1DFF5C0C00C76D73 /* Debug */,
+				EFDD37AD1DFF5C0C00C76D73 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		EFDD37AE1DFF5C0C00C76D73 /* Build configuration list for PBXNativeTarget "DroneApp" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				EFDD37AF1DFF5C0C00C76D73 /* Debug */,
+				EFDD37B01DFF5C0C00C76D73 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		EFDD37B11DFF5C0C00C76D73 /* Build configuration list for PBXNativeTarget "DroneAppTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				EFDD37B21DFF5C0C00C76D73 /* Debug */,
+				EFDD37B31DFF5C0C00C76D73 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		EFDD37B41DFF5C0C00C76D73 /* Build configuration list for PBXNativeTarget "DroneAppUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				EFDD37B51DFF5C0C00C76D73 /* Debug */,
+				EFDD37B61DFF5C0C00C76D73 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = EFDD37791DFF5C0C00C76D73 /* Project object */;
+}
